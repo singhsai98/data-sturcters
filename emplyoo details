@@ -1,0 +1,40 @@
+#include<stdio.h>
+struct employee {
+    char    empname[30];
+    int     empno;
+    char depertmentname[30];
+    int   salary;
+    int     age;
+    int     phno;
+} s;
+int main()
+{
+    int i,n,a;
+    struct employee emp[100];
+    printf("Enter total of employes:");
+    scanf("%d",&n);
+     printf("\nEnter information:\n");
+    for(i=0;i<n;i++)
+    {
+    
+     printf("Name :");          scanf("%s",emp[i].empname);
+    printf("ID :");            scanf("%d",&emp[i].empno);
+    printf("deparetment name:");        scanf("%s",emp[i].depertmentname);
+    printf("Salary :");        scanf("%d",&emp[i].salary);
+    printf("Age :");        scanf("%d",&emp[i].age);
+    printf("phone number :");        scanf("%d",&emp[i].phno);
+    }
+    printf("\nDisplaying Information:\n");
+    printf("\nNAME\tNO\tDEPT NAME\tSALARY\tAGE\tPH NO\n");
+    for(i=0;i<n;i++)
+    {
+    
+     printf("\n %s\t"   ,emp[i].empname);
+    printf(" %d\t"     ,emp[i].empno);
+    printf("%s\t\t",emp[i].depertmentname);
+    printf(" %d\t",emp[i].salary);
+    printf("%d\t",emp[i].age);
+     printf("%d\t",emp[i].phno);
+    }
+    return 0;
+}
